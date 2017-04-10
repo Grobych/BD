@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="981.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+      <Tab fx:id="loginTab" text="Login">
+          <content>
+              <AnchorPane>
+                  <Button fx:id="loginButton" layoutX="350.0" layoutY="25.0" mnemonicParsing="false" onAction="#loginButtonClick" prefHeight="25.0" prefWidth="108.0" text="Login" />
+                  <PasswordField fx:id="passwordField" layoutX="200.0" layoutY="25.0" />
+                  <Label layoutX="50.0" layoutY="25.0" text="Name: GLOBA    Password: " />
+                  <Label fx:id="passLabel" layoutX="500.0" layoutY="25.0" text="" />
+                  <Button fx:id="logoutButton" layoutX="350.0" layoutY="75.0" mnemonicParsing="false" onAction="#logoutButtonClick" prefHeight="25.0" prefWidth="108.0" text="Logout" />
+
+              </AnchorPane>
+
+          </content>
+
+      </Tab>
+    <Tab fx:id="concertTab" disable="true" text="Concerts">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="604.0" prefWidth="875.0">
+               <children>
+                  <Button fx:id="showConcertsButton" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#showButtonClick" prefHeight="25.0" prefWidth="108.0" text="Show concerts" />
+
+                  <TextField fx:id="placeNameTxt" layoutX="445.0" layoutY="57.0" />
+                  <TextField fx:id="placeAddTxt" layoutX="658.0" layoutY="57.0" />
+                  <Label layoutX="399.0" layoutY="61.0" text="Name" />
+                  <Label layoutX="608.0" layoutY="61.0" text="Address" />
+                  <TableView fx:id="table" layoutX="14.0" layoutY="132.0" prefHeight="501.0" prefWidth="940.0">
+                    <columns>
+                      <TableColumn fx:id="tableID" prefWidth="25.0" text="ID" />
+                      <TableColumn fx:id="tableName" prefWidth="150.0" text="Name" />
+                      <TableColumn fx:id="tableGroup" prefWidth="200.0" text="Group" />
+                        <TableColumn fx:id="tablePlace" prefWidth="150.0" text="Place" />
+                        <TableColumn fx:id="tableAdd" prefWidth="150.0" text="Address" />
+                        <TableColumn fx:id="tableDate" prefWidth="100.0" text="Date" />
+                        <TableColumn fx:id="tableCost" prefWidth="100.0" text="Cost" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="addConcertButton" layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onAction="#addConcertButtonClick" prefHeight="25.0" prefWidth="110.0" text="Add concert" />
+                  <Label layoutX="165.0" layoutY="94.0" text="Name" />
+                  <Label layoutX="403.0" layoutY="94.0" text="Date" />
+                  <TextField fx:id="nameConcertTxt" layoutX="222.0" layoutY="90.0" />
+                  <TextField fx:id="groupConcertTxt" layoutX="658.0" layoutY="90.0" />
+                  <DatePicker fx:id="datePicker" layoutX="444.0" layoutY="90.0" prefHeight="25.0" prefWidth="151.0" />
+                  <Label layoutX="612.0" layoutY="94.0" text="Group" />
+                  <Label layoutX="821.0" layoutY="94.0" text="Cost" />
+                  <TextField fx:id="costTxt" layoutX="860.0" layoutY="90.0" prefHeight="25.0" prefWidth="57.0" />
+                  <Label fx:id="reportLabel" layoutX="819.0" layoutY="27.0" text="" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="OrgTab" disable="true" text="Organizers">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="registerOrgButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Register Organizer" />
+                  <PieChart fx:id="orgChart" layoutX="136.0" layoutY="106.0" prefHeight="506.0" prefWidth="687.0" styleClass="red" />
+                  <Button fx:id="statisticButton" layoutX="14.0" layoutY="39.0" mnemonicParsing="false" onAction="#statButtonClick" prefHeight="25.0" prefWidth="114.0" text="Show statistic" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="Place/Group" text="Login">
+          <content>
+              <AnchorPane>
+                  <Button fx:id="addGroupButton" layoutX="263.0" layoutY="23.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Add group" />
+                  <Button fx:id="addPlaceButton" layoutX="264.0" layoutY="57.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Add place" />
+                  <Label layoutX="399.0" layoutY="27.0" text="Name" />
+                  <TextField fx:id="groupNameTxt" layoutX="445.0" layoutY="23.0" />
+                  <Label layoutX="616.0" layoutY="27.0" text="Style" />
+                  <TextField fx:id="groupStyleTxt" layoutX="658.0" layoutY="23.0" />
+              </AnchorPane>
+
+          </content>
+
+      </Tab>
+  </tabs>
+</TabPane>
